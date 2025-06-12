@@ -6,13 +6,15 @@ import AppLayout from "./layouts/AppLayout"
 import Contact from "./pages/Contact"
 import Dashboard from "./pages/Dashboard"
 import Shop from "./pages/Shop"
+import ProductDetails from "./pages/ProductDetails"
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<AppLayout />}>
       <Route index element={<Home />} />
-      <Route path="shop" element={<Shop/>} /> 
+      <Route path="shop" element={<Shop/>} />
+      <Route path="shop/:id" element={<ProductDetails />}/> 
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} /> 
       <Route path="dashboard" element={<Dashboard />} /> 

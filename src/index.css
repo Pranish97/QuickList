@@ -1,7 +1,7 @@
 
 body {
   margin: 0;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Poppins", sans-serif;
   display: flex;
 }
 .app-layout {
@@ -34,29 +34,37 @@ nav ul {
 }
 
 nav ul li {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-nav ul li a {
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
   color: white;
   font-weight: 500;
-  font-size: 1.25rem;
-  display: block;
-  padding: 15px 40px;
+  font-size: 1.1rem;
+  padding: 12px 20px;
   border-radius: 6px;
   transition: background-color 0.3s, color 0.3s;
 }
 
-nav ul li a:hover {
+.nav-icon {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+.nav-link:hover {
   background-color: #ffbd33;
   color: #111;
 }
 
-nav ul li a.active {
+.nav-link.active {
   background-color: #ffbd33;
   color: black;
 }
+
 
 
 .main-content {
@@ -131,4 +139,162 @@ nav ul li a.active {
   padding: 6px 12px;
   font-weight: bold;
   border-radius: 4px;
+}
+
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  overflow-y: auto;
+  box-sizing: border-box;
+  width: 1288px;
+  margin: 0 auto;
+  padding: 0 16px; 
+}
+
+
+
+.shop-title {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.shop-title > h1{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.product-grid > a{
+  text-decoration: none;
+}
+
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+
+.card-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .card-icons {
+  opacity: 1;
+}
+
+.card-icons .icon {
+  background: #fff;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.category {
+  color: #888;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 6px 0;
+  color: black;
+}
+
+.price-rating-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.price .current-price{
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating .filled {
+  color: #facc15;
+}
+
+.rating .empty {
+  color: #ccc;
+}
+
+.rating-value {
+  font-size: 12px;
+  color: #888;
+  margin-left: 4px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  border: none;
+  background-color: #eee;
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+.pagination .active-page {
+  background-color: #dda42a;
+  color: white;
 }
