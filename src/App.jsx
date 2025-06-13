@@ -7,6 +7,7 @@ import Contact from "./pages/Contact"
 import Dashboard from "./pages/Dashboard"
 import Shop from "./pages/Shop"
 import ProductDetails from "./pages/ProductDetails"
+import Loading from "./pages/Loading"
 
 
 const router = createBrowserRouter(

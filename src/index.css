@@ -298,3 +298,164 @@ nav ul li {
   background-color: #dda42a;
   color: white;
 }
+
+
+/* Loading Page */
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  text-align: center;
+  color: white;
+  position: relative;
+  width: 1288px;
+  height: 100vh; 
+  background-color: black;
+  font-family: "Boldonse", system-ui;
+}
+
+
+.loading-text {
+  font-size: 3.75rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  position: relative;
+  
+}
+
+.character-img {
+  position: absolute;
+  width: 210px;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg);
+  animation: float 3s ease-in-out infinite;
+}
+
+.percentage{
+  font-size: 4rem;
+
+}
+
+
+/* Product Details Page */
+.product-detail-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  overflow-y: auto;
+  box-sizing: border-box;
+  width: 1288px;
+  margin: 0 auto;
+  padding: 0 16px; 
+  justify-content: center;
+}
+
+.product-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  gap: 40px;
+  margin-left: 80px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.image-section img {
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.info-section {
+  flex: 1;
+  min-width: 280px;
+}
+
+.brand {
+  font-size: 20px;
+  color: gray;
+}
+
+.product-title {
+  font-size: 35px;
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 29px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.option-group {
+  margin-bottom: 15px;
+}
+
+.size-options, .color-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.size-btn {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.size-btn.selected {
+  border-color: #dda42a;
+  color: #dda42a;
+}
+
+.color-swatch {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-swatch.black {
+  background: black;
+}
+
+.color-swatch.orange {
+  background: orange;
+}
+
+.qty-input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-to-cart {
+  padding: 12px 24px;
+  background-color: #ffbd33;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover{
+  background-color: #b9881d;
+  color: white;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+

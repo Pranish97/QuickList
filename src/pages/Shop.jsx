@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useGetAllProductsQuery } from "../app/services/apiData";
 import { FaStar, FaHeart, FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
 
 const Shop = () => {
   const { data, isError, isLoading } = useGetAllProductsQuery();
@@ -16,6 +17,12 @@ const Shop = () => {
   );
 
   const totalPages = Math.ceil(data?.products.length / productsPerPage);
+
+  if(isLoading){
+    return (
+      <Loading/>
+    )
+  }
 
   return (
     <div className="shop-container">
